@@ -25,14 +25,15 @@
         <div class="score-container">0</div>
         <div class="best-container">0</div>
       </div>
+      <a class="restart-button"><script>document.write(i18n.get('new_game'))</script></a>
     </div>
 
     <div class="above-game">
       <div id="night" style="padding:10px;">
-            <a id="nightbtn"><img src="style/night.png"></a>
+            <a id="nightbtn" href="#" role="button" aria-label="Night Mode"><img src="style/night.png"></a>
+            <a id="nightToggle" class="night-toggle-button" href="#" role="button" aria-pressed="false"><script>document.write(i18n.get('night_mode'))</script></a>
       </div>
       <p class="game-intro"><script>document.write(i18n.get('intro'))</script></p>
-      <a class="restart-button"><script>document.write(i18n.get('new_game'))</script></a>
       <a class="undo-button"><script>document.write(i18n.get('undo'))</script></a>
     </div>
 

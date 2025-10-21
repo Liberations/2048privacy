@@ -91,24 +91,22 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(getApplication(), R.string.toggle_fullscreen, Toast.LENGTH_SHORT).show();
         // Set fullscreen toggle on webview LongClick
-        mWebView.setOnTouchListener((v, event) -> {
-            // Implement a long touch action by comparing
-            // time between action up and action down
-            long currentTime = System.currentTimeMillis();
-            if ((event.getAction() == MotionEvent.ACTION_UP)
-                    && (Math.abs(currentTime - mLastTouch) > mTouchThreshold)) {
-                boolean toggledFullScreen = !isFullScreen();
-                saveFullScreen(toggledFullScreen);
-                applyFullScreen(toggledFullScreen);
-            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                mLastTouch = currentTime;
-            }
-            // return so that the event isn't consumed but used
-            // by the webview as well
-            return false;
-        });
-        pressBackToast = Toast.makeText(getApplicationContext(), R.string.press_back_again_to_exit,
-                Toast.LENGTH_SHORT);
+//        mWebView.setOnTouchListener((v, event) -> {
+//            // Implement a long touch action by comparing
+//            // time between action up and action down
+//            long currentTime = System.currentTimeMillis();
+//            if ((event.getAction() == MotionEvent.ACTION_UP)
+//                    && (Math.abs(currentTime - mLastTouch) > mTouchThreshold)) {
+//                boolean toggledFullScreen = !isFullScreen();
+//                saveFullScreen(toggledFullScreen);
+//                applyFullScreen(toggledFullScreen);
+//            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                mLastTouch = currentTime;
+//            }
+//            // return so that the event isn't consumed but used
+//            // by the webview as well
+//            return false;
+//        });
     }
 
     @Override
