@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">2048</string>
+    <string name="press_back_again_to_exit">Press again to exit</string>
+    <string name="toggle_fullscreen">toggle fullscreen</string>
+</resources>
